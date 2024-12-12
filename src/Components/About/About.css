@@ -1,0 +1,22 @@
+.aboutContainer{
+    display: flex;
+    height: 100vh;
+}
+.aboutdescContainer{
+    width: 60%;
+    margin: 30px;
+}
+.aboutimage{
+    height:90%;
+    border-radius: 10%;
+    margin-top: 20px;
+}
+.aboutimage:hover{
+    border-radius: 50%;
+    border-width: 20px;
+    border-color: red;
+}
+.description{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}

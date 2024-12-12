@@ -1,0 +1,19 @@
+.navContainer{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: oblique;
+}
+.bar{
+    position: fixed;
+}
+.navElements{
+    padding-right: 30px;
+    text-decoration: none;
+    color: white;
+}
+.navElements:hover{
+    color: red;
+}

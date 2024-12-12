@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Home from './Components/Home/Home';
+import About from './Components/About/About';
+import Price from './Components/Pricingplans/price';
+import Trainer from './Components/Trainers/Trainers';
+import {BrowserRouter,Routes,Route, Navigate} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="App App-header">
+      <BrowserRouter>
+      <header style={{marginBottom:"40px"}}>
+       <Header/>
       </header>
+      <Routes>
+        <Route path='/' element={<Navigate to="/Home"></Navigate>}/>
+        <Route path='/Home' element={<Home/>}/>
+        <Route path='/About' element={<About/>}/>
+        <Route path='/Price' element={<Price/>}/>
+        <Route path='/Trainers' element={<Trainer/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
